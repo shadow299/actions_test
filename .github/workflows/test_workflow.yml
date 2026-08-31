@@ -1,0 +1,23 @@
+name: Build and Run C Program
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: build with make
+        run: make
+
+      - name: run the binary
+        run: ./main
+
+      - name: cleanup
+        run: make clean
