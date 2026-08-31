@@ -25,6 +25,7 @@ int run_tests() {
     return UNITY_END();
 }
 
+#ifndef TESTING
 int main() {
     for(int i = 0; i < 5; i++) {
         printf("Running %d\n", i);
@@ -32,3 +33,4 @@ int main() {
     }
     return 0;
 }
+#endif

@@ -15,6 +15,9 @@ clean:
 run: main
 	./main
 
-test: test_runner.c main.o unity.o
-	$(CC) -o test_runner test_runner.c main.o unity.o
+test_main.o: main.c
+	$(CC) -c -DTESTING main.c -o test_main.o
+
+test: test_runner.c test_main.o unity.o
+	$(CC) -o test_runner test_runner.c test_main.o unity.o
 	./test_runner
