@@ -21,7 +21,10 @@ jobs:
         run: make
 
       - name: run the binary
-        run: ./main
+        run: make run
+
+      - name: run tests
+        run: make test
 
       - name: cleanup
         run: make clean
