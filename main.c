@@ -29,7 +29,11 @@ int run_tests() {
 int main() {
     for(int i = 0; i < 5; i++) {
         printf("Running %d\n", i);
-        sleep(2);
+        sleep(3);
+    }
+    for(int i = 0; i < 5; i++) {
+        printf("Running second %d\n", i);
+        sleep(3);
     }
     return 0;
 }
