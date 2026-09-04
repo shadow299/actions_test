@@ -14,7 +14,7 @@ void test_add_negative(void) {
 }
 
 void test_add_zeros(void) {
-    TEST_ASSERT_EQUAL(1, add(0, 0));
+    TEST_ASSERT_EQUAL(0, add(0, 0));
 }
 
 int run_tests() {
