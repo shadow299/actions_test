@@ -1,5 +1,5 @@
 CC=gcc
-UNITY_SO ?= /home/pi/secret-library
+UNITY_SO ?= /home/pi/secret-library/libunity.so
 UNITY_RPATH = $(dir $(UNITY_SO))
 
 all: main
